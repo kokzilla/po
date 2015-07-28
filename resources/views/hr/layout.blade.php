@@ -38,11 +38,24 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">PO Oil</div>
+                <div class="title">PO Oil-HR</div>
             </div>
-            {!! Form::open(array('url' => 'foo/bar')) !!}
-            ชื่อ : {!! Form::text('username') !!}
-            {!! Form::close() !!}
+
+            @if (Session::has('message'))       
+	            <div class="flash alert-info">          
+	                <p>{{ Session::get('message') }}</p>        
+	            </div>  
+        	@endif
+
+	        @if ($errors->any())        
+		        <div class='flash alert-danger'>            
+		            @foreach ( $errors->all() as $error )               
+		                <p>{{ $error }}</p>         
+		            @endforeach     
+		        </div>  
+        	@endif
+
+            @yield('content')  
         </div>
     </body>
 </html>

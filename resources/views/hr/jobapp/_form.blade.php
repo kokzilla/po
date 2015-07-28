@@ -40,9 +40,12 @@
 							    {!! Form::text('salary',null, array('class' => 'form-control')) !!}
 							</div>
 							<div class="form-group">
+							
+								
 							    {!! Form::label('nickname', 'ชื่อเล่น:') !!}
 
 							    {!! Form::text('nickname',null, array('class' => 'form-control')) !!}
+							
 							</div>
 						</div>
 					</div>

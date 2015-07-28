@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/portal', function () {
+    return view('portal');
+});
+
+Route::get('/hr', function () {
+    return view('hr.portal');
+});
+
+// Provide controller methods with object instead of ID
+Route::model('jobapps', 'Jobapp');
+Route::model('positions', 'Position');
+
+
+Route::resource('jobapps','JobappsController');
+Route::resource('positions','PositionsController');

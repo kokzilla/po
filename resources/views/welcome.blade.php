@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>PO-Oil Information System</title>
 
         <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         {!! HTML::style('/css/app.css') !!}
@@ -18,7 +18,7 @@
                 font-weight: 100;
                 font-family: 'Lato';
             }
-/*
+
             .container {
                 text-align: center;
                 display: table-cell;
@@ -29,7 +29,7 @@
                 text-align: center;
                 display: inline-block;
             }
-*/
+
             .title {
                 font-size: 96px;
             }
@@ -40,9 +40,12 @@
             <div class="content">
                 <div class="title">PO Oil</div>
             </div>
-            {!! Form::open(array('url' => 'foo/bar')) !!}
-            ชื่อ : {!! Form::text('username') !!}
-            {!! Form::close() !!}
+            <div>
+            <a class="btn btn-lg btn-success" href="/portal">
+                <i class="fa fa-flag fa-2x pull-left"></i> เข้าสู่ระบบ
+            </a>
+            </div>
+
         </div>
     </body>
 </html>

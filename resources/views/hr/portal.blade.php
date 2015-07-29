@@ -1,5 +1,5 @@
 @extends('hr.layout')
 
 @section('content')
-Human Resource Portal 
+	Human Resource Portal 
 @stop

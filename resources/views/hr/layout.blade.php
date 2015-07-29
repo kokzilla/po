@@ -284,7 +284,17 @@
                             <a href="/portal"><i class="fa fa-dashboard fa-fw"></i> Portal</a>
                         </li>
                         <li>
-                            <a href="/jobapps/create"><i class="fa fa-edit fa-fw"></i> รับสมัคร</a>
+                            
+                            <a href="/jobapps/create"><i class="fa fa-edit fa-fw"></i> รับสมัคร<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/jobapps/list">แสดงผู้สมัคร</a>
+                                </li>
+                                <li>
+                                    <a href="/jobapps/create">สมัครใหม่</a>
+                                </li>
+                                
+                            </ul>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -336,6 +346,7 @@
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
 
     <!-- Morris Charts JavaScript -->
     <script src="/bower_components/raphael/raphael-min.js"></script>

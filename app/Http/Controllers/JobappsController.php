@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Input;
+use Redirect;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -72,6 +74,10 @@ class JobappsController extends Controller
     public function update(Request $request, $id)
     {
         //
+    }
+
+    public function list(){
+        return view('hr.jobapp.list');
     }
 
     /**

@@ -6,11 +6,21 @@ use Illuminate\Http\Request;
 
 use Input;
 use Redirect;
+use App\Models\Hr\Jobapp;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class JobappsController extends Controller
 {
+	
+	/**
+	* Server side validate
+	*/
+	protected $rules = [        
+        'first_name' => ['required'],        
+        
+    ];
+	
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +28,8 @@ class JobappsController extends Controller
      */
     public function index()
     {
-        return view('hr.list');
+		$jobapps = Jobapp::all();
+        return view('hr.jobapps.index',compact('jobapps'));
     }
 
     /**
@@ -28,7 +39,7 @@ class JobappsController extends Controller
      */
     public function create()
     {
-        return view('hr.jobapp.create');
+        return view('hr.jobapps.create');
     }
 
     /**
@@ -39,7 +50,12 @@ class JobappsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		$this->validate($request, $this->rules);
+		
+        $input = Input::all();
+        Jobapp::create( $input );
+ 
+        return Redirect::route('jobapps.index')->with('message', 'บันทึกข้อมูลการสมัครเรียบร้อย');
     }
 
     /**
@@ -76,8 +92,8 @@ class JobappsController extends Controller
         //
     }
 
-    public function list(){
-        return view('hr.jobapp.list');
+    public function search(){
+        return view('hr.jobapps.list');
     }
 
     /**

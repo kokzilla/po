@@ -1,6 +1,6 @@
 <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">{!! $header_text !!}</h1>
+                   <h2 class="page-header">{!! $header_text !!}</h2> 
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -17,17 +17,19 @@
 	                <div class="row">
 	                    <div class="col-lg-6">
 							<div class="form-group">
+							    {!! Form::label('job_app_no', 'เลขที่เอกสาร:') !!}
+							     {!! Form::text('job_app_no',null, array('class' => 'form-control')) !!}
+							</div>
+							
+							<div class="form-group">
 							    {!! Form::label('pos_id', 'ตำแหน่ง:') !!}
 							    {!! Form::select('pos_id', array('01'=>'คนขับ','02'=>'บัชี'),'01', array('class' => 'form-control')) !!}
 							</div>
 							<div class="form-group">
 							    {!! Form::label('firstname', 'ชื่อ:') !!}
-							    {!! Form::text('firstname',null, array('class' => 'form-control')) !!}
+							    {!! Form::text('first_name',null, array('class' => 'form-control')) !!}
 							</div>
-							<div class="form-group">
-							    {!! Form::label('lastname', 'นามสกุล:') !!}
-							    {!! Form::text('lastname',null, array('class' => 'form-control')) !!}
-							</div>
+							
 							<div class="form-group">
 							    {!! Form::submit($submit_text, ['class'=>'btn btn-primary']) !!}
 							</div>
@@ -40,12 +42,8 @@
 							    {!! Form::text('salary',null, array('class' => 'form-control')) !!}
 							</div>
 							<div class="form-group">
-							
-								
-							    {!! Form::label('nickname', 'ชื่อเล่น:') !!}
-
-							    {!! Form::text('nickname',null, array('class' => 'form-control')) !!}
-							
+							    {!! Form::label('last_name', 'นามสกุล:') !!}
+							    {!! Form::text('last_name',null, array('class' => 'form-control')) !!}
 							</div>
 						</div>
 					</div>

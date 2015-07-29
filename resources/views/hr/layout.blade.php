@@ -285,10 +285,10 @@
                         </li>
                         <li>
                             
-                            <a href="/jobapps/create"><i class="fa fa-edit fa-fw"></i> รับสมัคร<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> รับสมัคร<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/jobapps/list">แสดงผู้สมัคร</a>
+                                    <a href="/jobapps">แสดงผู้สมัคร</a>
                                 </li>
                                 <li>
                                     <a href="/jobapps/create">สมัครใหม่</a>
@@ -318,13 +318,13 @@
 
         <div id="page-wrapper">
             @if (Session::has('message'))       
-                <div class="flash alert-info">          
+                <div class="alert alert-info">          
                     <p>{{ Session::get('message') }}</p>        
-                </div>  R
+                </div>  
             @endif
 
             @if ($errors->any())        
-                <div class='flash alert-danger'>            
+                <div class='alert alert-danger'>            
                     @foreach ( $errors->all() as $error )               
                         <p>{{ $error }}</p>         
                     @endforeach     
@@ -355,6 +355,20 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="/dist/js/sb-admin-2.js"></script>
+	
+	<!-- DataTables JavaScript -->
+    <script src="/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+	
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
+
 
 </body>
 

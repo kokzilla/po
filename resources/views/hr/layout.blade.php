@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PO-Oil IS Admin</title>
+    <title>PO-Oil Information System</title>
     {!! HTML::style('/css/app.css') !!}
 
     <!-- Bootstrap Core CSS -->
@@ -52,7 +52,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">initial-scale Admin v2.0</a>
+                <a class="navbar-brand" href="index.html">Back Office Admin v1.0</a>
             </div>
             <!-- /.navbar-header -->
 

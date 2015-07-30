@@ -23,6 +23,7 @@
                 text-align: center;
                 display: table-cell;
                 vertical-align: middle;
+				
             }
 
             .content {
@@ -33,6 +34,10 @@
             .title {
                 font-size: 96px;
             }
+			.login{
+				width: 30%;
+				align:center;
+			}
         </style>
     </head>
     <body>
@@ -41,9 +46,19 @@
                 <div class="title">PO Oil</div>
             </div>
             <div>
-            <a class="btn btn-lg btn-success" href="/portal">
-                <i class="fa fa-flag fa-2x pull-left"></i> เข้าสู่ระบบ
-            </a>
+			<div class="login">
+				<div class="input-group margin-bottom-sm">
+				  <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+				  <input class="form-control" type="text" placeholder="Email address">
+				</div>
+				<div class="input-group">
+				  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+				  <input class="form-control" type="password" placeholder="Password">
+				</div>
+				<a class="btn btn-lg btn-success" href="/portal">
+					<i class="fa fa-flag fa-2x pull-left"></i> เข้าสู่ระบบ
+				</a>
+			
             </div>
 
         </div>

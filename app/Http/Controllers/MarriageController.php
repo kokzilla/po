@@ -4,14 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Input;
-use Redirect;
-
-user App\Models\Hr\Position;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class PositionsController extends Controller
+class MarriageController extends Controller
 {
     /**
      * Display a listing of the resource.

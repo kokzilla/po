@@ -4,8 +4,8 @@ namespace App\Models\Hr;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Position extends Model
+class Marriage extends Model
 {
-    protected $table = 'po_pos';
+    protected $table = 'po_marriage_status';
 	protected $guarded = [];
 }

@@ -75,7 +75,8 @@ class JobappsController extends Controller {
      */
     public function edit(Jobapp $jobapp) {
 		$positions = Position::lists('detail','pos_id');
-        return view('hr.jobapps.edit', compact('jobapp','positions'));
+		$marriages = Marriage::lists('status_name','status_id');
+        return view('hr.jobapps.edit', compact('jobapp','positions','marriages'));
     }
 
     /**

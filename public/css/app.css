@@ -8734,5 +8734,11 @@ button.close {
   height: 100% !important;
   opacity: 0;
 }
-
+/*# Custom by Chartwut */
+.row{
+	margin-bottom: 10px !important;
+}
+.form-group{
+	 margin-right: 10px !important;
+}
 /*# sourceMappingURL=app.css.map */

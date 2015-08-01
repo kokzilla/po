@@ -21,6 +21,7 @@ Route::get('/portal', function () {
 
 Route::get('/hr', function () {
     return view('hr.portal');
+    
 });
 
 // Provide controller methods with object instead of ID

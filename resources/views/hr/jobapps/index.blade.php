@@ -1,10 +1,17 @@
 @extends('hr.layout')
 @section('content')
-<h3>รายชื่อผู้สมัคร</h3>
 
-<a class="btn btn-default" href="/jobapps/create">
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header">รายชื่อผู้สมัคร</h3>
+        <a class="btn btn-default" href="/jobapps/create">
     <i class="fa fa-user-plus fa-x pull-left"></i> สมัครใหม่
 </a>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+
 @if (!$jobapps->count())
 @else
 
@@ -44,8 +51,13 @@
         @endforeach
     </tbody>
 </table>
-<!-- Page-Level Demo Scripts - Tables - Use for reference -->
 <script>
+    $(document).ready(function () {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+</script>
 
-    @endif
-            @stop
+@endif
+@stop
